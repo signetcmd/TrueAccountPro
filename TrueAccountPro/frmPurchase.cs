@@ -1807,28 +1807,29 @@ namespace TrueAccountPro
             }
             if (e.Column == dgvAdjustment.Columns["clmParticular"])
             {
-                //RadDropDownListEditor editor = this.dgvAdjustment.ActiveEditor as RadDropDownListEditor;
-                //if (editor != null)
-                //{
-                //    //RadDropDownList combo = (RadDropDownList)e.ActiveEditor;
-                //    //editor.DropDownStyle = RadDropDownList;
-                //    editor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                //    editor.AutoCompleteDataSource = AutoCompleteSource.ListItems;
+                RadDropDownListEditor editor = this.dgvAdjustment.ActiveEditor as RadDropDownListEditor;
+                if (editor != null)
+                {
+                    //RadDropDownList combo = (RadDropDownList)e.ActiveEditor;
+                    //editor.DropDownStyle = RadDropDownList;
+                    //editor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    //editor.AutoCompleteDataSource = AutoCompleteSource.ListItems;
                     //((RadDropDownListEditorElement)((RadDropDownListEditor)this.dgvAdjustment.ActiveEditor).EditorElement).RightToLeft = true;
 
-                    RadDropDownListEditor cmb = dgvAdjustment.ActiveEditor as RadDropDownListEditor;
-                if (cmb != null)
-                {
-                    DataSet modelDts = myAdjustmentOpr.BindingParticulars();
-                    BindingSource modelBS = new BindingSource();
-                    modelBS.DataSource = modelDts.Tables[0];
-                    ((RadDropDownListEditorElement)(cmb).EditorElement).DisplayMember = "particular";
-                    ((RadDropDownListEditorElement)(cmb).EditorElement).ValueMember = "particular";
-                    ((RadDropDownListEditorElement)(cmb).EditorElement).DataSource = modelDts.Tables[0];
-                    ((RadDropDownListEditorElement)(cmb).EditorElement).SelectedIndex = -1;
-                    ((RadDropDownListEditorElement)(cmb).EditorElement).ShowPopup();
+                    //    RadDropDownListEditor cmb = dgvAdjustment.ActiveEditor as RadDropDownListEditor;
+                    //if (cmb != null)
+                    //{
+                    //    DataSet modelDts = myAdjustmentOpr.BindingParticulars();
+                    //    BindingSource modelBS = new BindingSource();
+                    //    modelBS.DataSource = modelDts.Tables[0];
+                    //    ((RadDropDownListEditorElement)(cmb).EditorElement).DisplayMember = "particular";
+                    //    ((RadDropDownListEditorElement)(cmb).EditorElement).ValueMember = "particular";
+                    //    ((RadDropDownListEditorElement)(cmb).EditorElement).DataSource = modelDts.Tables[0];
+                    //    ((RadDropDownListEditorElement)(cmb).EditorElement).SelectedIndex = -1;
+                    //    ((RadDropDownListEditorElement)(cmb).EditorElement).ShowPopup();
+                    //}
+                    //}
                 }
-                //}
             }
         }
         #endregion dgvAdjustment_CellEditorInitialized
